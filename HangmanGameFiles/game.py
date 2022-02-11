@@ -1,21 +1,23 @@
 #the secret word the play is trying to guess
 from ast import Num
 from random import random
-from secretWord import secretWord_dic
+#from secretWord import secretWord_dic
 from HMobject import hangMan
 lettersGuessed = ""
-
-#random word picker
-for word in secretWord_dic:
-    self.value = random.randint(1, 5)
+secretWord = "testing"
+current_hangMan_index = 0
 
 #The number of turns before the player loses
 failureCount = 7
 
 while failureCount > 0:
 
+#main game mechanics
+    #print(hangMan, sep = "\n")
+    for line in hangMan:
+        print(line)
     guess = input("Guess a letter[a-z]: ")
-    print(hangMan)
+
 
     if guess in secretWord:
         #if correct
@@ -35,11 +37,11 @@ while failureCount > 0:
         else:
             print("_", end="")
             wrongLetterCount += 1
-            hangMan = " "
+            #hangMan.pop(0)
 
     #if win
     if wrongLetterCount == 0:
-        print(f"Yay! You did it! The secret word was {secretWord}. You won!")
+        print(f" Yay! You did it! The secret word was {secretWord}. You won!")
         break
 
 else:
