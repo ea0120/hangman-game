@@ -1,1 +1,0 @@
-This is the classic Game of Hang-Man!
