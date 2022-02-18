@@ -71,7 +71,7 @@ class Display:
         return wrongLetterCount
 
     def checkLetter(self, secretWord, failureCount):
-          """checks the letter
+        """checks the letter
 
         Args:
             self (Display): An instance of Display.
@@ -80,7 +80,7 @@ class Display:
         """ 
         #check if good letter
         if self.guess in secretWord:
-            #if correct
+            #if guess is correct
             print(f"Correct! There may be one or more {self.guess} in the secret word.")
         else:
             failureCount -= 1
